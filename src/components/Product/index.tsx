@@ -1,14 +1,15 @@
 import React from 'react';
 
 import image from '../../assets/tshirt.png';
+import SellerInfo from '../SellerInfo/index';
 import { Container, Row, Panel, Column, Gallery, Section, Description } from './styles';
 
 const Product: React.FC = () => {
   return (
     <Container>
       <Row>
-        <a href="#">Compartilhar</a>
-        <a href="#">Vender um igual</a>
+        <a href="/share">Compartilhar</a>
+        <a href="/sell">Vender um igual</a>
       </Row>
 
       <Panel>
@@ -22,7 +23,7 @@ const Product: React.FC = () => {
 
         <Column>
           {/* <ProductAction /> */}
-          {/* <SellerInfo /> */}
+          <SellerInfo />
 
           <WarrantySection />
           <WarrantySection />
@@ -48,7 +49,7 @@ const WarrantySection = () => (
       </span>
     </div>
 
-    <a href="#">Saiba mais sobre garantia</a>
+    <a href="/about">Saiba mais sobre garantia</a>
   </Section>
 );
 
