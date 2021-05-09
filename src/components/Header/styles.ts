@@ -7,7 +7,7 @@ export const Container = styled.div`
   width: 100%;
   height: 100px;
   background: var(--color-header);
-  border-bottom: 1px solid var(--color-border);
+  /* border-bottom: 1px solid var(--color-border); */
 `;
 
 export const Wrapper = styled.div`

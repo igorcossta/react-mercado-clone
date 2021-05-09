@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { } from 'react';
 
 import { Container } from './styles';
+import MainBanner from '../../components/MainBanner';
 
 const Home: React.FC = () => {
   return (
     <Container>
-      <h1>Home</h1>
+      <MainBanner />
     </Container>
   );
 };

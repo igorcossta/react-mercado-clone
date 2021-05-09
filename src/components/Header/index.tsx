@@ -17,7 +17,7 @@ const Header: React.FC = () => {
 
         <Column>
           <SearchBar>
-            <input type="text" name="search" id="searchbar" placeholder="Buscar produtos marcas e muito mais..." />
+            <input type="text" name="search" id="searchbar" placeholder="Buscar produtos, marcas e muito mais..." />
           </SearchBar>
 
           <NavMenu>
