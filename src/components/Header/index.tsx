@@ -1,81 +1,48 @@
 import React from "react";
+import { Section, SearchBar, BurgerIcon } from "./styles";
 
-import LogoImg from '../../assets/logo-pt__large_plus.png';
-import VoucherImg from '../../assets/voucher.png';
-
-import { Section, Wrapper, Column, SearchBar, NavMenu, NavMenuList, NavMenuItem, DropdownArrow, NavMenuAccountList, NavMenuAccountItem, ShopCart } from "./styles";
+import Logo from '../../assets/logo-pt__large_plus.png';
+import Voucher from '../../assets/voucher.png';
+import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container';
+import Hidden from '@material-ui/core/Hidden';
 
 const Header: React.FC = () => {
   return (
     <Section>
-      <Wrapper>
-        <Column>
-          <a href="/" className="header-logo">
-            <img src={LogoImg} alt="Mercado Livre Brasil - Onde comprar e vender de Tudo" />
-          </a>
-        </Column>
+      <Container maxWidth="lg">
+        <Grid container>
 
-        <Column>
-          <SearchBar>
-            <input type="text" name="search" id="searchbar" placeholder="Buscar produtos, marcas e muito mais..." />
-          </SearchBar>
+          <Hidden only={["xs", "sm"]}>
+            <Grid item md={2}>
+              <a href="/">
+                <img src={Logo} alt="Mercado Livre Brasil - Onde comprar e vender de Tudo" className="header-logo" />
+              </a>
+            </Grid>
+          </Hidden>
 
-          <NavMenu>
-            <NavMenuList>
-              <NavMenuItem>
-                <a href="/"> Categorias <DropdownArrow />  </a>
-              </NavMenuItem>
+          <Grid item xs={10} sm={6}>
+            <SearchBar>
+              <input type="text" name="search" id="searchbar" placeholder="Buscar produtos, marcas e muito mais..." />
+            </SearchBar>
+          </Grid>
 
-              <NavMenuItem>
-                <a href="/"> Ofertas do dia </a>
-              </NavMenuItem>
+          <Hidden only={["xs", "sm"]}>
+            <Grid item md={4}>
+              <a href="/">
+                <img src={Voucher} alt="Selos e Cupons" className="image header-voucher" />
+              </a>
+            </Grid>
+          </Hidden>
 
-              <NavMenuItem>
-                <a href="/"> Histórico </a>
-              </NavMenuItem>
+          <Hidden only={["md", "lg"]}>
+            <Grid item xs={2} sm={6}>
+              <BurgerIcon />
+            </Grid>
+          </Hidden>
 
-              <NavMenuItem>
-                <a href="/"> Supermercado </a>
-              </NavMenuItem>
-
-              <NavMenuItem>
-                <a href="/"> Moda </a>
-              </NavMenuItem>
-
-              <NavMenuItem>
-                <a href="/"> Vender </a>
-              </NavMenuItem>
-            </NavMenuList>
-          </NavMenu>
-        </Column>
-
-        <Column>
-          <a href="/" className="header-voucher">
-            <img src={VoucherImg} alt="Selos e Cupons" />
-          </a>
-
-          <NavMenu>
-            <NavMenuAccountList>
-              <NavMenuAccountItem>
-                <a href="/" >Crie a sua conta</a>
-              </NavMenuAccountItem>
-
-              <NavMenuAccountItem>
-                <a href="/" >Entre</a>
-              </NavMenuAccountItem>
-
-              <NavMenuAccountItem>
-                <a href="/" >Compras</a>
-              </NavMenuAccountItem>
-
-              <NavMenuAccountItem>
-                <a href="/carrinho"> <ShopCart /> </a>
-              </NavMenuAccountItem>
-            </NavMenuAccountList>
-          </NavMenu>
-        </Column>
-
-      </Wrapper>
+        </Grid>
+      </Container>
     </Section>
   );
 };

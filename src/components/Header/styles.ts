@@ -1,48 +1,24 @@
-import styled from "styled-components";
-import { FiMapPin } from 'react-icons/fi';
+import styled, { css } from "styled-components";
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { RiShoppingCartLine } from 'react-icons/ri';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 export const Section = styled.header`
-  width: 100%;
-  height: 100px;
   background: var(--color-header);
-  /* border-bottom: 1px solid var(--color-border); */
-`;
 
-export const Wrapper = styled.div`
-  margin: 0 auto;
-  max-width: 1220px;
-
-  display: flex;
-`;
-
-export const Column = styled.div`
-  height: fit-content;
-  
-  &:nth-child(1) {
-    /* border: 1px solid red; */
-    
-    max-width: 134px;
+  .header-logo {
     margin-top: 8px;
   }
 
-  &:nth-child(2) {
-    /* border: 1px solid blue; */
-
-    display: flex;
-    flex-direction: column;
-    margin: 0 125px 0 60px;
+  .header-voucher {
+    margin-top: 8px;
+    margin-left: -85px;
+    border: 1px solid;
   }
 
-  &:nth-child(3) {
-    /* border: 1px solid green; */
-    margin-top: 8px;
-
-    > a img {
-      max-width: 340px;
-      max-height: 39px;
-    }
+  .image {
+    max-width: 340px;
+    max-height: 39px;
   }
 `;
 
@@ -69,77 +45,19 @@ export const SearchBar = styled.form`
   }
 `;
 
-export const NavMenu = styled.div`
-  font-size: 13px;
-  font-weight: 400;
-`;
-
-export const NavMenuList = styled.ul`
-  list-style: none;
-  padding: 12px 0 0 0;
-
-  display: flex;
-  align-items: center;
-`;
-
-export const NavMenuItem = styled.li`
-  line-height: 22px;
-  font-size: 14px;
-  padding-right: 18px;
-
-  > a {
-    text-decoration: none;
-    color: rgba(51,51,51,.6);
-
-    display: flex;
-    align-items: center;
-
-    &:hover {
-      color: var(--color-black);
-    }
-
-    transition: color .3s ease-out;
-  }
-`;
-
-export const PinIcon = styled(FiMapPin)``;
-
-export const DropdownArrow = styled(MdKeyboardArrowDown)`
-  fill: var(--color-gray);
-  width: auto;
-  height: auto;
-  flex-shrink: 0;
-`;
-
-export const NavMenuAccountList = styled.ul`
-  list-style: none;
-  padding: 18px 0 0 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const NavMenuAccountItem = styled.li`
-  line-height: 22px;
-  font-size: 14px;
-  padding-right: 25px;
-
-  display: flex;
-
-  > a {
-    text-decoration: none;
-    color: var(--color-black);
-
-    display: flex;
-    align-items: center;
-
-  }
-`;
-
-export const ShopCart = styled(RiShoppingCartLine)`
+const iconsCss = css`
   fill: var(--color-black);
   width: 20px;
   height: 20px;
   flex-shrink: 0;
+`;
+
+export const CartIcon = styled(RiShoppingCartLine)`
+  ${iconsCss}
+`;
+
+export const BurgerIcon = styled(GiHamburgerMenu)`
+  ${iconsCss}
+  margin-top: 17px;
+  float: right;
 `;
