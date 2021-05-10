@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 
 
-const Recommendations: React.FC = () => {
+const RecommendationSection: React.FC = () => {
   return (
     <Section>
       <Container maxWidth="lg">
@@ -16,4 +16,4 @@ const Recommendations: React.FC = () => {
   );
 };
 
-export default Recommendations;
+export default RecommendationSection;

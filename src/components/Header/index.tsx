@@ -3,11 +3,11 @@ import React from "react";
 import LogoImg from '../../assets/logo-pt__large_plus.png';
 import VoucherImg from '../../assets/voucher.png';
 
-import { Container, Wrapper, Column, SearchBar, NavMenu, NavMenuList, NavMenuItem, DropdownArrow, NavMenuAccountList, NavMenuAccountItem, ShopCart } from "./styles";
+import { Section, Wrapper, Column, SearchBar, NavMenu, NavMenuList, NavMenuItem, DropdownArrow, NavMenuAccountList, NavMenuAccountItem, ShopCart } from "./styles";
 
 const Header: React.FC = () => {
   return (
-    <Container>
+    <Section>
       <Wrapper>
         <Column>
           <a href="/" className="header-logo">
@@ -76,7 +76,7 @@ const Header: React.FC = () => {
         </Column>
 
       </Wrapper>
-    </Container>
+    </Section>
   );
 };
 

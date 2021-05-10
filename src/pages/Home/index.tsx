@@ -1,13 +1,13 @@
 import React, { } from 'react';
 
 import { Container } from './styles';
-import MainBanner from '../../components/MainBanner';
+import BannerSection from '../../components/BannerSection';
 import Main from '../../components/Main';
 
 const Home: React.FC = () => {
   return (
     <Container>
-      <MainBanner />
+      <BannerSection />
       <Main />
     </Container>
   );

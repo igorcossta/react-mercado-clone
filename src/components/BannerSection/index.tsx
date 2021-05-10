@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Container, SlideShow, MySlide, SlideArrow } from './styles';
+import { Section, SlideShow, MySlide, SlideArrow } from './styles';
 
 import banner1 from '../../assets/banner/banner-1.png';
 import banner2 from '../../assets/banner/banner-2.png';
@@ -9,6 +9,7 @@ import banner4 from '../../assets/banner/banner-4.png';
 import banner5 from '../../assets/banner/banner-5.png';
 import banner6 from '../../assets/banner/banner-6.png';
 import banner7 from '../../assets/banner/banner-7.png';
+import Grid from '@material-ui/core/Grid';
 
 const banner = [{
   src: banner1,
@@ -43,7 +44,7 @@ function getImage(n: number) {
   return banner[n];
 }
 
-const MainBanner: React.FC = () => {
+const BannerSection: React.FC = () => {
   const [index, setIndex] = useState(0);
 
   // useEffect(() => {
@@ -72,17 +73,21 @@ const MainBanner: React.FC = () => {
 
   var imagem = getImage(index);
   return (
-    <Container>
-      <SlideShow>
-        <MySlide>
-          <img alt={imagem.alt} src={imagem.src} />
-        </MySlide>
+    <Section>
+      <Grid container>
+        <Grid item xs={12}>
+          <SlideShow>
+            <MySlide>
+              <img alt={imagem.alt} src={imagem.src} />
+            </MySlide>
 
-        <SlideArrow onClick={() => previus(index - 1)} className="prev">&#10094;</SlideArrow>
-        <SlideArrow onClick={() => next(index + 1)} className="next">&#10095;</SlideArrow>
-      </SlideShow>
-    </Container>
+            <SlideArrow onClick={() => previus(index - 1)} className="prev">&#10094;</SlideArrow>
+            <SlideArrow onClick={() => next(index + 1)} className="next">&#10095;</SlideArrow>
+          </SlideShow>
+        </Grid>
+      </Grid>
+    </Section>
   );
 };
 
-export default MainBanner;
+export default BannerSection;

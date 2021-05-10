@@ -3,7 +3,7 @@ import { FiMapPin } from 'react-icons/fi';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { RiShoppingCartLine } from 'react-icons/ri';
 
-export const Container = styled.div`
+export const Section = styled.header`
   width: 100%;
   height: 100px;
   background: var(--color-header);
