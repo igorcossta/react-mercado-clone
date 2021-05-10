@@ -1,5 +1,5 @@
 import React from "react";
-import { Section, SearchBar, BurgerIcon } from "./styles";
+import { Section, SearchBar, UnorderedList, ListItem, BurgerIcon, CartIcon, ArrowIcon, Nav, NavItem } from "./styles";
 
 import Logo from '../../assets/logo-pt__large_plus.png';
 import Voucher from '../../assets/voucher.png';
@@ -21,10 +21,41 @@ const Header: React.FC = () => {
             </Grid>
           </Hidden>
 
-          <Grid item xs={10} sm={6}>
+          <Grid item xs={8} sm={6}>
             <SearchBar>
               <input type="text" name="search" id="searchbar" placeholder="Buscar produtos, marcas e muito mais..." />
             </SearchBar>
+
+            <Hidden only={["xs", "sm"]}>
+              <UnorderedList>
+                <ListItem>
+                  <a href="/">
+                    Categorias
+                    </a>
+                  <ArrowIcon />
+                </ListItem>
+
+                <ListItem>
+                  <a href="/">Ofertas</a>
+                </ListItem>
+
+                <ListItem>
+                  <a href="/">Histórico</a>
+                </ListItem>
+
+                <ListItem>
+                  <a href="/">Supermercado</a>
+                </ListItem>
+
+                <ListItem>
+                  <a href="/">Moda</a>
+                </ListItem>
+
+                <ListItem>
+                  <a href="/">Vender</a>
+                </ListItem>
+              </UnorderedList>
+            </Hidden>
           </Grid>
 
           <Hidden only={["xs", "sm"]}>
@@ -32,11 +63,29 @@ const Header: React.FC = () => {
               <a href="/">
                 <img src={Voucher} alt="Selos e Cupons" className="image header-voucher" />
               </a>
+
+              <Nav>
+                <NavItem href="/">
+                  Crie a sua conta
+                </NavItem>
+
+                <NavItem href="/">
+                  Entre
+                </NavItem>
+
+                <NavItem href="/">
+                  Compras
+                </NavItem>
+              </Nav>
             </Grid>
           </Hidden>
 
           <Hidden only={["md", "lg"]}>
-            <Grid item xs={2} sm={6}>
+            <Grid item xs={4} sm={6}>
+              {/* display only small-screen */}
+              <Hidden only={["md", "lg"]}>
+                <CartIcon />
+              </Hidden>
               <BurgerIcon />
             </Grid>
           </Hidden>

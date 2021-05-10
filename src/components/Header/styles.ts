@@ -12,14 +12,14 @@ export const Section = styled.header`
 
   .header-voucher {
     margin-top: 8px;
-    margin-left: -85px;
-    border: 1px solid;
+    float: right;
   }
 
   .image {
     max-width: 340px;
     max-height: 39px;
   }
+
 `;
 
 export const SearchBar = styled.form`
@@ -45,19 +45,66 @@ export const SearchBar = styled.form`
   }
 `;
 
+export const UnorderedList = styled.ul`
+  display: flex;
+  list-style: none;
+  padding: 12px 0 12px;
+  margin: 0;
+`;
+
+export const ListItem = styled.li`
+  display: flex;
+  align-items: center;
+  width: auto;
+  float: left;
+  padding-right: 16px;
+  line-height: 22px;
+  font-size: 14px;
+
+  > a {
+    text-decoration: none;
+    color: var(--color-gray);
+    outline: 0;
+
+    transition: color .3s ease-out;
+
+    &:hover {
+      color: var(--color-black);
+    }
+  }
+`;
+
 const iconsCss = css`
   fill: var(--color-black);
   width: 20px;
   height: 20px;
   flex-shrink: 0;
+  margin-top: 17px;
+  float: right;
 `;
 
 export const CartIcon = styled(RiShoppingCartLine)`
   ${iconsCss}
+  margin-left: 12px;
 `;
 
 export const BurgerIcon = styled(GiHamburgerMenu)`
   ${iconsCss}
-  margin-top: 17px;
+`;
+
+export const ArrowIcon = styled(MdKeyboardArrowDown)`
+  fill: var(--color-gray);
+`;
+
+export const Nav = styled.nav`
   float: right;
+  display: flex;
+`;
+
+export const NavItem = styled.a`
+  text-decoration: none;
+  line-height: 65px;
+  font-size: 14px;
+  padding: 0 10px;
+  color: var(--color-black);
 `;
