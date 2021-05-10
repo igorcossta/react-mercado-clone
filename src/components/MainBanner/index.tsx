@@ -2,26 +2,41 @@ import React, { useState } from 'react';
 
 import { Container, SlideShow, MySlide, SlideArrow } from './styles';
 
-import image from '../../assets/banner-1.png';
-import image2 from '../../assets/banner-2.png';
-import image3 from '../../assets/banner-3.png';
-import image4 from '../../assets/banner-4.png';
+import banner1 from '../../assets/banner/banner-1.png';
+import banner2 from '../../assets/banner/banner-2.png';
+import banner3 from '../../assets/banner/banner-3.png';
+import banner4 from '../../assets/banner/banner-4.png';
+import banner5 from '../../assets/banner/banner-5.png';
+import banner6 from '../../assets/banner/banner-6.png';
+import banner7 from '../../assets/banner/banner-7.png';
 
 const banner = [{
-  src: image,
+  src: banner1,
   alt: 'banner 1'
 },
 {
-  src: image2,
+  src: banner2,
   alt: 'banner 2'
 },
 {
-  src: image3,
+  src: banner3,
   alt: 'banner 3'
 },
 {
-  src: image4,
+  src: banner4,
   alt: 'banner 4'
+},
+{
+  src: banner5,
+  alt: 'banner 5'
+},
+{
+  src: banner6,
+  alt: 'banner 6'
+},
+{
+  src: banner7,
+  alt: 'banner 7'
 }];
 
 function getImage(n: number) {
@@ -60,7 +75,7 @@ const MainBanner: React.FC = () => {
     <Container>
       <SlideShow>
         <MySlide>
-          <img alt={imagem.alt} src={imagem.src} className="fade" />
+          <img alt={imagem.alt} src={imagem.src} />
         </MySlide>
 
         <SlideArrow onClick={() => previus(index - 1)} className="prev">&#10094;</SlideArrow>
