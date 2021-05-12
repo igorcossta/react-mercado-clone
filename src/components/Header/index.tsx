@@ -36,7 +36,7 @@ const Header: React.FC = () => {
                 </ListItem>
 
                 <ListItem>
-                  <a href="/">Ofertas</a>
+                  <a href="/">Ofertas do dia</a>
                 </ListItem>
 
                 <ListItem>
@@ -80,12 +80,11 @@ const Header: React.FC = () => {
             </Grid>
           </Hidden>
 
-          <Hidden only={["md", "lg"]}>
+          <Hidden only={["md", "lg", "xl"]}>
             <Grid item xs={4} sm={6}>
-              {/* display only small-screen */}
-              <Hidden only={["md", "lg"]}>
-                <CartIcon />
-              </Hidden>
+              {/* <Hidden only={["md", "lg"]}> */}
+              <CartIcon />
+              {/* </Hidden> */}
               <BurgerIcon />
             </Grid>
           </Hidden>

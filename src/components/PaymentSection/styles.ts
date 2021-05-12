@@ -21,12 +21,19 @@ export const Section = styled.section`
     > a {
       text-decoration: none;
       color: var(--color-blue);
+
+      &:hover {
+        color: var(--color-hover);
+      }
     }
   }
 
   // material-ui override
-  .MuiPaper-elevation1 {
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+  .MuiBox-root-2 { // arrumar
+    border-left: 3px solid #3483FA;
+  }
+  .MuiPaper-rounded {
+    border-radius: 0;
   }
 `;
 

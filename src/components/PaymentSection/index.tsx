@@ -30,6 +30,18 @@ const PaymentSection: React.FC = () => {
             </Grid>
           </Hidden>
 
+          <Grid item xs={12} md={6} lg={3}>
+            <Card>
+              <CardContent>
+                <div className="card-payment">
+                  <CardIcon />
+                  <span className="card-title">Até 12 vezes sem juros</span>
+                  <a href="/" className="card-subtitle">Ver mais</a>
+                </div>
+              </CardContent>
+            </Card>
+          </Grid>
+
           <Hidden only={['xs', 'sm']}>
             <Grid item md={6} lg={3}>
               <Card>
@@ -43,18 +55,6 @@ const PaymentSection: React.FC = () => {
               </Card>
             </Grid>
           </Hidden>
-
-          <Grid item xs={12} md={6} lg={3}>
-            <Card>
-              <CardContent>
-                <div className="card-payment">
-                  <CardIcon />
-                  <span className="card-title">Até 12 vezes sem juros</span>
-                  <a href="/" className="card-subtitle">Ver mais</a>
-                </div>
-              </CardContent>
-            </Card>
-          </Grid>
 
           <Hidden only={['xs', 'sm']}>
             <Grid item md={6} lg={3}>

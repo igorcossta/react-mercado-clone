@@ -50,6 +50,7 @@ export const UnorderedList = styled.ul`
   list-style: none;
   padding: 12px 0 12px;
   margin: 0;
+  white-space: nowrap;
 `;
 
 export const ListItem = styled.li`
