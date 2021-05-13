@@ -1,5 +1,9 @@
 import styled, { css } from 'styled-components';
-import { HiOutlineLocationMarker, HiOutlineChatAlt2, HiOutlineClock } from 'react-icons/hi';
+import {
+  HiOutlineLocationMarker,
+  HiOutlineChatAlt2,
+  HiOutlineClock,
+} from 'react-icons/hi';
 
 export const Container = styled.div`
   padding: 48px 32px;
@@ -21,7 +25,7 @@ export const LocationCard = styled.div`
 
   > div {
     margin-left: 8px;
-    
+
     > p {
       font-size: 16px;
     }
@@ -39,7 +43,9 @@ const iconCSS = css`
   height: 30px;
 `;
 
-export const LocationIcon = styled(HiOutlineLocationMarker)`${iconCSS}`;
+export const LocationIcon = styled(HiOutlineLocationMarker)`
+  ${iconCSS}
+`;
 
 export const ReputationCard = styled.div`
   margin-top: 35px;
@@ -122,9 +128,13 @@ export const ReputationRow = styled.div`
   }
 `;
 
-export const SupportIcon = styled(HiOutlineChatAlt2)`${iconCSS}`;
+export const SupportIcon = styled(HiOutlineChatAlt2)`
+  ${iconCSS}
+`;
 
-export const ClockIcon = styled(HiOutlineClock)`${iconCSS}`;
+export const ClockIcon = styled(HiOutlineClock)`
+  ${iconCSS}
+`;
 
 export const More = styled.a`
   margin-top: 20px;

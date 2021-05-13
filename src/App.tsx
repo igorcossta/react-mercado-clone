@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
@@ -12,14 +13,13 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      {/* start routes */}
+      { /* prettier-ignore */ }
       <Switch>
         <Route exact path="/"> <Home /> </Route>
         <Route exact path="/:id"> <Product /> </Route>
 
         <Route>404</Route>
       </Switch>
-      {/* end routes */}
 
       <GlobalStyles />
       <Footer />

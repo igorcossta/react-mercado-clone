@@ -1,5 +1,9 @@
 import styled from 'styled-components';
-import { HiOutlineHeart, HiOutlineCheck, HiOutlineShieldCheck } from 'react-icons/hi';
+import {
+  HiOutlineHeart,
+  HiOutlineCheck,
+  HiOutlineShieldCheck,
+} from 'react-icons/hi';
 
 export const Container = styled.div`
   padding: 32px;
@@ -119,8 +123,9 @@ export const Actions = styled.div`
   flex-direction: column;
 `;
 
-type ButtonProps = { solid?: boolean }
+type ButtonProps = { solid?: boolean };
 
+// prettier-ignore
 export const Button = styled.button<ButtonProps>`
   display: flex;
   align-items: center;
@@ -131,9 +136,9 @@ export const Button = styled.button<ButtonProps>`
   padding: 12px 10px;
   margin-top: 10px;
 
-  color: ${props => props.solid ? 'var(--color-white)' : 'var(--color-blue)'};
-  background: ${props => props.solid ? 'var(--color-blue)' : 'transparent'};
-  border: ${props => props.solid ? 'none' : '1px solid var(--color-blue)'};
+  color: ${(props) => (props.solid ? 'var(--color-white)' : 'var(--color-blue)')};
+  background: ${(props) => (props.solid ? 'var(--color-blue)' : 'transparent')};
+  border: ${(props) => (props.solid ? 'none' : '1px solid var(--color-blue)')};
 
   cursor: pointer;
 `;
@@ -146,7 +151,7 @@ export const Bene = styled.ul`
 
   > li {
     display: flex;
-    
+
     > p {
       margin-left: 10px;
       color: var(--color-gray);

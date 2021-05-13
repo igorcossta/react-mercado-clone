@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { RiShoppingCartLine } from 'react-icons/ri';
 import { GiHamburgerMenu } from 'react-icons/gi';
@@ -19,7 +19,6 @@ export const Section = styled.header`
     max-width: 340px;
     max-height: 39px;
   }
-
 `;
 
 export const SearchBar = styled.form`
@@ -29,7 +28,7 @@ export const SearchBar = styled.form`
   padding: 8px 1px;
 
   > input {
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
     width: 100%;
     height: 100%;
 
@@ -41,7 +40,6 @@ export const SearchBar = styled.form`
       color: var(--color-black);
       outline: 0;
     }
-
   }
 `;
 
@@ -67,7 +65,7 @@ export const ListItem = styled.li`
     color: var(--color-gray);
     outline: 0;
 
-    transition: color .3s ease-out;
+    transition: color 0.3s ease-out;
 
     &:hover {
       color: var(--color-black);

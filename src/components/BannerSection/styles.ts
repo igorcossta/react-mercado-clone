@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-export const Section = styled.section`
-`;
+export const Section = styled.section``;
 
 export const SlideShow = styled.div`
   position: relative;
 
-  .prev, .next {
+  .prev,
+  .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -26,8 +26,9 @@ export const SlideShow = styled.div`
     border-radius: 3px 0 0 3px;
   }
 
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
   }
 `;
 

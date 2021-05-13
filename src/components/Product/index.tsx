@@ -3,35 +3,41 @@ import React from 'react';
 import image from '../../assets/placa.jpg';
 import SellerInfo from '../SellerInfo/index';
 import ProductAction from '../ProductAction/index';
-import { Container, Row, Panel, Column, Gallery, Section, Description } from './styles';
+import {
+  Container,
+  Row,
+  Panel,
+  Column,
+  Gallery,
+  Section,
+  Description,
+} from './styles';
 
-const Product: React.FC = () => {
-  return (
-    <Container>
-      <Row>
-        <a href="/share">Compartilhar</a>
-        <a href="/sell">Vender um igual</a>
-      </Row>
+const Product: React.FC = () => (
+  <Container>
+    <Row>
+      <a href="/share">Compartilhar</a>
+      <a href="/sell">Vender um igual</a>
+    </Row>
 
-      <Panel>
-        <Column>
-          <Gallery>
-            <img alt="t-shirt" src={image} />
-          </Gallery>
+    <Panel>
+      <Column>
+        <Gallery>
+          <img alt="t-shirt" src={image} />
+        </Gallery>
 
-          <Info />
-        </Column>
+        <Info />
+      </Column>
 
-        <Column>
-          <ProductAction />
-          <SellerInfo />
+      <Column>
+        <ProductAction />
+        <SellerInfo />
 
-          <WarrantySection />
-        </Column>
-      </Panel>
-    </Container>
-  );
-};
+        <WarrantySection />
+      </Column>
+    </Panel>
+  </Container>
+);
 
 const WarrantySection = () => (
   <Section>
@@ -56,7 +62,9 @@ const Info = () => (
   <Description>
     <h2>Descrição</h2>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus amet tenetur fugiat. Error quo molestiae placeat dicta optio odio, molestias omnis iure harum obcaecati rerum dolorum dolorem tenetur et quas.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus amet
+      tenetur fugiat. Error quo molestiae placeat dicta optio odio, molestias
+      omnis iure harum obcaecati rerum dolorum dolorem tenetur et quas.
       <br />
       <br />
       items lorems:
@@ -70,10 +78,12 @@ const Info = () => (
       - 1x lorem ipsum
       <br />
       - 1x lorem ipsum
-
       <br />
       <br />
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus distinctio doloremque dolor commodi, impedit, tenetur dolorem eveniet iusto hic, consequatur officia. Molestiae aspernatur et temporibus fugit illum nostrum, architecto at.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus
+      distinctio doloremque dolor commodi, impedit, tenetur dolorem eveniet
+      iusto hic, consequatur officia. Molestiae aspernatur et temporibus fugit
+      illum nostrum, architecto at.
     </p>
   </Description>
 );

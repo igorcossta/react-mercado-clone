@@ -65,7 +65,7 @@ export const Section = styled.div`
   > div {
     display: flex;
     flex-direction: column;
-    
+
     > span + span {
       margin-top: 16px;
     }

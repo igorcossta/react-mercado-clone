@@ -23,7 +23,7 @@ export const Section = styled.section`
     display: flex;
     align-items: center;
     padding-bottom: 20px;
-    
+
     > h1 {
       color: var(--color-gray);
       padding-right: 10px;
@@ -42,7 +42,7 @@ export const Section = styled.section`
 
   .image-container img {
     width: 224px;
-    height: 224px; 
+    height: 224px;
   }
 
   .item-content {
